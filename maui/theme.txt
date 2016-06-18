@@ -1,0 +1,25 @@
+#   Maui GRUB theme  
+#   2016, Uri herrera <uri_herrera@nitrux.in>
+#   Some rights reserved. This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 License.
+
+#   Main background (image)
+desktop-image: ""
+
+#   Main background (color)
+#   desktop-color:
+
+#   
+title-text: ""
+title-font: "DejaVu Sans Mono Regular 16"
+title-color: "#fcfcfc"
+
+#   Grub 2 title (use mono spaced fonts only!)
++ label {
+    left = 50%-300
+    top = 75%-23
+    height = 30
+    width = 600
+    font = "DejaVu Sans Mono Regular 10"
+    color = "#fcfcfc"
+    align = "center"
+}
