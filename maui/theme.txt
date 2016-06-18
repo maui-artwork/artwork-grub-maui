@@ -4,7 +4,6 @@
 
 #   Main background (image)
 #   desktop-image: ""
-
 #   Main background (color)
 desktop-color:"#37474F"
 
