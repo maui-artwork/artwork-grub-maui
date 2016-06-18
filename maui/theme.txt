@@ -3,15 +3,17 @@
 #   Some rights reserved. This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 License.
 
 #   Main background (image)
-desktop-image: ""
+#   desktop-image: ""
 
 #   Main background (color)
-#   desktop-color:
+desktop-color:"#37474F"
 
 #   
 title-text: ""
 title-font: "DejaVu Sans Mono Regular 16"
-title-color: "#fcfcfc"
+title-color: "#FAFAFA"
+terminal-font: "DejaVu Sans Mono Regular 12"
+terminal-box: "terminal_*.png"
 
 #   Grub 2 title (use mono spaced fonts only!)
 + label {
@@ -20,6 +22,50 @@ title-color: "#fcfcfc"
     height = 30
     width = 600
     font = "DejaVu Sans Mono Regular 10"
-    color = "#fcfcfc"
+    color = "#FAFAFA"
     align = "center"
 }
+
+#   Grub 2 boot menu
++ boot_menu {
+    left = 0%
+    width = 100%
+    top = 25%
+    height = 50%	
+    item_font = "DejaVu Sans Mono Regular 12"
+    item_color = "#FAFAFA"
+    item_height = 44
+    item_icon_space = 15
+    item_spacing = 5
+    item_padding = 50
+    selected_item_font = "DejaVu Sans Mono Bold 12"
+    selected_item_color= "#FAFAFA"
+    selected_item_pixmap_style = "select_*.png"
+    icon_height = 44
+    icon_width = 44
+    scrollbar = true
+    scrollbar_width = 20
+    scrollbar_thumb = "slider_*.png"
+}
+
+#   Grub 2 boot menu progress bar
++ progress_bar {
+    id = "__timeout__"
+    left = 33%
+    width = 33%
+    top = 80%
+    height = 5
+    show_text = false
+    text = ""
+    fg_color = #FAFAFA
+    bg_color = #37474F
+    border_color = #37474F
+}
+
+# 
++ label {
+    top = 
+    left = 
+    text = "Press enter to boot the selected OS, `e' to edit the commands before booting or `c' for a command-line."
+    font = "DejaVu Sans Mono Regular 10"
+    color = "#FAFAFA"
