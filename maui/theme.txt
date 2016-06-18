@@ -5,12 +5,12 @@
 #   Main background (image)
 #   desktop-image: ""
 #   Main background (color)
-desktop-color:"#37474F"
+desktop-color:"#37474f"
 
 #   
 title-text: ""
 title-font: "DejaVu Sans Mono Regular 16"
-title-color: "#FAFAFA"
+title-color: "#fafafa"
 terminal-font: "DejaVu Sans Mono Regular 12"
 terminal-box: "terminal_*.png"
 
@@ -21,7 +21,7 @@ terminal-box: "terminal_*.png"
     height = 30
     width = 600
     font = "DejaVu Sans Mono Regular 10"
-    color = "#FAFAFA"
+    color = "#fafafa"
     align = "center"
 }
 
@@ -32,13 +32,13 @@ terminal-box: "terminal_*.png"
     top = 25%
     height = 50%	
     item_font = "DejaVu Sans Mono Regular 12"
-    item_color = "#FAFAFA"
+    item_color = "#fafafa"
     item_height = 44
     item_icon_space = 15
     item_spacing = 5
     item_padding = 50
     selected_item_font = "DejaVu Sans Mono Bold 12"
-    selected_item_color= "#FAFAFA"
+    selected_item_color= "#fafafa"
     selected_item_pixmap_style = "select_*.png"
     icon_height = 44
     icon_width = 44
@@ -56,9 +56,9 @@ terminal-box: "terminal_*.png"
     height = 5
     show_text = false
     text = ""
-    fg_color = #FAFAFA
-    bg_color = #37474F
-    border_color = #37474F
+    fg_color = #fafafa
+    bg_color = #37474f
+    border_color = #37474f
 }
 
 # 
@@ -67,4 +67,4 @@ terminal-box: "terminal_*.png"
     left = 
     text = "Press enter to boot the selected OS, `e' to edit the commands before booting or `c' for a command-line."
     font = "DejaVu Sans Mono Regular 10"
-    color = "#FAFAFA"
+    color = "#fafafa"
