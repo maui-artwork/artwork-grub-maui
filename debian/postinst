@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 Grub_Dir="/boot/grub"
 Grub_File="/etc/default/grub"
 Theme_Name="maui"			# The theme will be installed in a dir with this name. Avoid spaces.
@@ -8,10 +10,13 @@ Theme_Dir=$Grub_Dir/themes/$Theme_Name
 
 # Grub theme
 function grub_theme {
+  echo "Installing Grub Theme..."
   i=$(sed -n 's,^#\?GRUB_THEME=,&,p' $Grub_File)
   if [[ -z $i ]]; then
+    echo "No existing Grub Theme found"
     echo -e "\nGRUB_THEME=$Theme_Dir/$Theme_Definition_File" >>$Grub_File
   else
+    echo "Existing Grub Theme found"
     sed "s,^#\?GRUB_THEME=.*,GRUB_THEME=$Theme_Dir/$Theme_Definition_File," <$Grub_File >$Grub_File.~
     mv $Grub_File.~ $Grub_File
   fi

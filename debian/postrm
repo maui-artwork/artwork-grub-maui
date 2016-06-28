@@ -4,8 +4,11 @@ set -e
 
 function grub_theme {
   Grub_File="/etc/default/grub"
-  sed '/^GRUB_THEME=/ d' <$Grub_File >$Grub_File.~
-  mv $Grub_File.~ $Grub_File
+  i=$(sed -n 's,^#\?GRUB_THEME=,&,p' $Grub_File)
+  if [[ -z $i ]]; then
+    sed '/^GRUB_THEME=/ d' <$Grub_File >$Grub_File.~
+    mv $Grub_File.~ $Grub_File
+  fi  
 }
 
 # summary of how this script can be called:
