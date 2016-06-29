@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-
 Grub_Dir="/boot/grub"
 Grub_File="/etc/default/grub"
 Theme_Name="maui"			# The theme will be installed in a dir with this name. Avoid spaces.
@@ -22,6 +20,6 @@ function grub_theme {
   fi
 }
 
-if [ install = "$1" -o upgrade = "$1" ]; then
+if [ install = "$1" -o upgrade = "$1" -o configure = "$1" ]; then
   grub_theme
 fi 
