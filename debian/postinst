@@ -11,10 +11,10 @@ function grub_theme {
   echo "Installing Grub Theme..."
   i=$(sed -n 's,^#\?GRUB_THEME=,&,p' $Grub_File)
   if [[ -z $i ]]; then
-    echo "No existing Grub Theme found"
+    echo "No existing Grub Theme found. Setting up new grub theme."
     echo -e "\nGRUB_THEME=$Theme_Dir/$Theme_Definition_File" >>$Grub_File
   else
-    echo "Existing Grub Theme found"
+    echo "Existing Grub Theme found. Overwriting existing one."
     sed "s,^#\?GRUB_THEME=.*,GRUB_THEME=$Theme_Dir/$Theme_Definition_File," <$Grub_File >$Grub_File.~
     mv $Grub_File.~ $Grub_File
   fi
